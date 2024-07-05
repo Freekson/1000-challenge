@@ -1,0 +1,21 @@
+@import "../../ui-kit.scss";
+
+.header {
+  display: flex;
+  justify-content: center;
+  padding: 1rem 0;
+  background-color: $black-color;
+
+  a {
+    color: $white-color;
+    font-size: 1.4rem;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    &:not(:last-child) {
+      margin-right: 2rem;
+    }
+  }
+}

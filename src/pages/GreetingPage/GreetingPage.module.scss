@@ -1,12 +1,6 @@
 // !color palate
 
-$black-color: #2b2024;
-$white-color: #fbf9fa;
-$main-color: #8f002c;
-$contrast-color: #fd0054;
-$shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-$shadow-active: rgba(100, 100, 111, 0.9) 0px 7px 29px 0px;
-$transition: all 0.15s ease-in;
+@import "../../ui-kit.scss";
 
 h1 {
   font-family: "Bebas Neue", sans-serif;
@@ -68,6 +62,7 @@ h1 {
     font-weight: 500;
     box-shadow: $shadow;
     transition: $transition;
+    cursor: pointer;
 
     &:hover {
       background-color: $contrast-color;
