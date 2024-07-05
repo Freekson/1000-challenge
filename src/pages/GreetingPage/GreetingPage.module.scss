@@ -1,0 +1,77 @@
+// !color palate
+
+$black-color: #2b2024;
+$white-color: #fbf9fa;
+$main-color: #8f002c;
+$contrast-color: #fd0054;
+$shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+$shadow-active: rgba(100, 100, 111, 0.9) 0px 7px 29px 0px;
+$transition: all 0.15s ease-in;
+
+h1 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 5rem;
+  color: $black-color;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10%;
+  .container {
+    margin-bottom: 3rem;
+
+    p {
+      color: $black-color;
+      font-weight: bold;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .days,
+    .pushups {
+      display: flex;
+      justify-content: center;
+
+      div {
+        background-color: $main-color;
+        padding: 1rem 2rem;
+        border-radius: 15px;
+        color: $white-color;
+        box-shadow: $shadow;
+        cursor: pointer;
+        transition: $transition;
+
+        &:hover {
+          background-color: $contrast-color;
+          box-shadow: $shadow-active;
+          transform: translateY(-5px);
+        }
+      }
+
+      div:not(:last-child) {
+        margin-right: 2rem;
+      }
+
+      .active {
+        background-color: $contrast-color;
+      }
+    }
+  }
+
+  .btn {
+    background-color: $main-color;
+    color: $white-color;
+    padding: 1rem 3rem;
+    border-radius: 15px;
+    font-weight: 500;
+    box-shadow: $shadow;
+    transition: $transition;
+
+    &:hover {
+      background-color: $contrast-color;
+      box-shadow: $shadow-active;
+    }
+  }
+}
