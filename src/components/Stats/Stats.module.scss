@@ -1,0 +1,14 @@
+@import "../../ui-kit.scss";
+
+.statistics__item {
+  h6 {
+    color: $black-color;
+    font-size: 2rem;
+  }
+
+  p {
+    color: $contrast-color;
+    font-weight: bold;
+    font-size: 1.8rem;
+  }
+}

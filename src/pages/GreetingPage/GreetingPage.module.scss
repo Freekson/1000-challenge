@@ -1,18 +1,17 @@
-// !color palate
-
 @import "../../ui-kit.scss";
-
-h1 {
-  font-family: "Bebas Neue", sans-serif;
-  font-size: 5rem;
-  color: $black-color;
-}
 
 .wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 10%;
+
+  h1 {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 5rem;
+    color: $black-color;
+  }
+
   .container {
     margin-bottom: 3rem;
 

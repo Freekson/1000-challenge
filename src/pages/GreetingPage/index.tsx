@@ -5,7 +5,12 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { ChallengeDays, ChallengePushups } from "../../types";
 import { useDispatch, useSelector } from "react-redux";
-import { setDays, setPushups, setDate } from "../../redux/challenge/slice";
+import {
+  setDays,
+  setPushups,
+  setDate,
+  setPushupsStats,
+} from "../../redux/challenge/slice";
 import { RootState } from "../../redux/store";
 
 const GreetingPage: React.FC = () => {
@@ -34,16 +39,23 @@ const GreetingPage: React.FC = () => {
   const saveChallengeData = (): void => {
     const currentDate = new Date();
     const currentDateTimeString = currentDate.toLocaleString();
+    const pushupsStats = Array.from({ length: activeDay }, (_, index) => ({
+      day: index + 1,
+      reps: [],
+      completed: false,
+    }));
 
     dispatch(setDays(activeDay));
     dispatch(setPushups(activeQuantity));
     dispatch(setDate(currentDateTimeString));
+    dispatch(setPushupsStats(pushupsStats));
     localStorage.setItem(
       "challenge",
       JSON.stringify({
         days: activeDay,
         pushups: activeQuantity,
         startDate: currentDateTimeString,
+        pushupsStats,
       })
     );
   };

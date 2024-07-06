@@ -1,0 +1,30 @@
+@import "../../ui-kit.scss";
+
+.calendar {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+
+  .item {
+    background-color: #f0f0f0;
+    border: 2px solid #ccc;
+    padding: 5px;
+    position: relative;
+
+    .day {
+      color: $main-color;
+    }
+  }
+
+  .active {
+    border: 2px solid #28c7fa;
+  }
+
+  .failed {
+    border: 2px solid $main-color;
+  }
+  .completed {
+    border: 2px solid #3b5441;
+  }
+}

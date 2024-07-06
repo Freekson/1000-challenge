@@ -4,13 +4,13 @@ export const getChallengeFromLS = () => {
   const data = localStorage.getItem("challenge");
 
   if (data) {
-    const { days, pushups, startDate } = JSON.parse(data);
-    console.log(startDate);
+    const { days, pushups, startDate, pushupsStats } = JSON.parse(data);
 
     return {
       days,
       pushups,
       startDate,
+      pushupsStats,
     };
   }
 
@@ -18,5 +18,6 @@ export const getChallengeFromLS = () => {
     days: ChallengeDays.Days15,
     pushups: ChallengePushups.Pushups500,
     startDate: "",
+    pushupsStats: [],
   };
 };

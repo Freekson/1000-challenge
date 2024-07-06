@@ -1,0 +1,22 @@
+@import "../../ui-kit.scss";
+
+.addBtn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background-color: $main-color;
+  border: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 999px;
+  color: $white-color;
+  font-weight: 500;
+  box-shadow: $shadow;
+  cursor: pointer;
+  transition: $transition;
+
+  &:hover {
+    background-color: $contrast-color;
+    box-shadow: $shadow-active;
+  }
+}

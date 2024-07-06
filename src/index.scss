@@ -1,3 +1,5 @@
+@import "./ui-kit.scss";
+
 * {
   margin: 0;
   padding: 0;
@@ -11,4 +13,59 @@ body {
 
 a {
   text-decoration: none;
+}
+
+.popup-content {
+  left: 50% !important;
+  top: 50% !important;
+  transform: translate(-50%, -50%);
+  background-color: $white-color;
+  box-shadow: $shadow-active;
+  border-radius: 25px;
+  width: 400px;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  div {
+    display: none;
+  }
+
+  .popup {
+    display: flex;
+    flex-direction: column;
+
+    p {
+      color: $main-color;
+      font-weight: bold;
+    }
+
+    input {
+      border-radius: 5px;
+      border: solid 1px $contrast-color;
+      height: 30px;
+      margin-top: 1rem;
+      padding-left: 1rem;
+      outline: none;
+    }
+
+    button {
+      margin-top: 1rem;
+      background-color: $main-color;
+      height: 30px;
+      border: none;
+      border-radius: 10px;
+      color: $white-color;
+      font-weight: 500;
+      box-shadow: $shadow;
+      cursor: pointer;
+      transition: $transition;
+
+      &:hover {
+        background-color: $contrast-color;
+        box-shadow: $shadow-active;
+      }
+    }
+  }
 }
